@@ -2,15 +2,55 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px;
+  padding: 45px 0;
 
   nav {
     a {
       font-weight: 500;
     }
 
-    & :first-child {
-      margin-right: 57px;
+    & :last-child {
+      margin-left: 57px;
+    }
+  }
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+
+  width: 100% !important;
+  max-width: none !important;
+  height: 209px;
+  background-color: #000000;
+
+  h2 {
+    font-size: 24px;
+    color: $font_color;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #navbar {
+    svg {
+      width: 145px;
+    }
+    nav {
+      a {
+        font-size: 12px;
+      }
+      & :last-child {
+        margin-left: 27px;
+      }
+    }
+  }
+  #footer {
+    h2 {
+      font-size: 12px;
     }
   }
 }

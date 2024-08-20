@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom"
 import { useEffect, useState } from "react"
 
-import Logo from "../../utils/images/logo.svg"
+import Logo from "../logo"
 
 const Header = () => {
   const [page, setPage] = useState("")
@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header id="navbar">
-      <img src={Logo} alt="Logo kaza" />
+      <Logo />
 
       <nav>
         <Link

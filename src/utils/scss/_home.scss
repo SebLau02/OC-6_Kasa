@@ -37,7 +37,7 @@
     flex-wrap: wrap;
     background-color: $grey_bg;
     border-radius: $container_radius;
-    margin-top: 50px;
+    margin: 50px 0;
     padding: 55px 0;
     gap: 55px;
 
@@ -72,7 +72,7 @@
   }
 }
 
-@media screen and (max-width: 335px) {
+@media screen and (max-width: 375px) {
   #homepage {
     padding: 0 $padding_xs;
 
@@ -85,7 +85,7 @@
       }
     }
     main {
-      margin-top: $padding_xs;
+      margin: $padding_xs 0;
       gap: $padding_xs;
       padding: 0;
     }

@@ -18,10 +18,9 @@ a {
 
 #root {
   font-family: "montserrat_regular";
-  padding: 0 45px;
 
   & > * {
-    width: 100%;
+    width: 85%;
     max-width: 1240px;
     margin: auto;
   }
