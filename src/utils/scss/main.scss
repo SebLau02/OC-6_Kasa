@@ -1,0 +1,14 @@
+@import "_variables";
+@import "_typo";
+@import "_home";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#root {
+  font-family: "montserrat_regular";
+}
