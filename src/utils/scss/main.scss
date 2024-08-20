@@ -25,3 +25,11 @@ a {
     margin: auto;
   }
 }
+
+@media screen and (max-width: 375px) {
+  #root {
+    & > * {
+      width: 100%;
+    }
+  }
+}
