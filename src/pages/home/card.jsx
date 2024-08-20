@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import PropTypes from "prop-types"
 
 const Card = ({ product }) => {
-  console.log(product.id)
   return (
     <Link to={`/housing/${product.id}`}>
       <article className="product">
