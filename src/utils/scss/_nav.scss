@@ -1,0 +1,16 @@
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 45px;
+
+  nav {
+    a {
+      font-weight: 500;
+    }
+
+    & :first-child {
+      margin-right: 57px;
+    }
+  }
+}

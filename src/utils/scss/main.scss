@@ -1,6 +1,7 @@
 @import "_variables";
 @import "_typo";
 @import "_home";
+@import "_nav";
 
 *,
 ::before,
@@ -9,6 +10,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
 #root {
   font-family: "montserrat_regular";
+  padding: 0 45px;
+
+  & > * {
+    width: 100%;
+    max-width: 1240px;
+    margin: auto;
+  }
 }
