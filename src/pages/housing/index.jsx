@@ -11,23 +11,28 @@ const Housing = () => {
   const propertyId = useParams().id
   const property = data.find((property) => property.id === propertyId)
   return (
-    <div>
+    <div id="housing">
       <Carrousel images={property.pictures} />
-      <div>
-        <h1>{property.title}</h1>
-        <p>{property.location}</p>
-        <div className="host">
+      <div className="general-infos">
+        <div className="general-infos__titles">
+          <h1>{property.title}</h1>
+          <p>{property.location}</p>
+        </div>
+        <div className="general-infos__host">
           <p>{property.host.name}</p>
           <img src={property.host.picture} alt={property.host.name} />
         </div>
       </div>
-      <div className="tag-rate">
-        <div className="tags">
+      <div className="tags-rate">
+        <div className="tags-rate__tags">
           {property.tags.map((tag, i) => (
-            <span key={i}>{tag}</span>
+            <span tabIndex="0" key={i}>
+              {tag}
+            </span>
           ))}
         </div>
-        <div className="rate">
+        <div className="tags-rate__rate">
+          Rate
           <Rating rate={property.rating} />
         </div>
       </div>
