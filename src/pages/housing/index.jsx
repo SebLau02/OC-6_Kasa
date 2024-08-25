@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom"
 
 import Rating from "./rating"
 import Carrousel from "./carrousel"
+import { Dropdown } from "../../components"
 
 const Housing = () => {
   const { data } = useContext(ProductContext)
@@ -29,6 +30,10 @@ const Housing = () => {
         <div className="rate">
           <Rating rate={property.rating} />
         </div>
+      </div>
+      <div className="desc-fittings">
+        <Dropdown title="Description" text={[property.description]} />
+        <Dropdown title="Equipements" text={property.equipments} />
       </div>
     </div>
   )
