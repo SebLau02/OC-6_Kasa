@@ -64,5 +64,10 @@
         color: $font_color;
       }
     }
+    &__rate {
+      svg {
+        margin: 5px;
+      }
+    }
   }
 }

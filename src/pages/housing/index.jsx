@@ -32,7 +32,6 @@ const Housing = () => {
           ))}
         </div>
         <div className="tags-rate__rate">
-          Rate
           <Rating rate={property.rating} />
         </div>
       </div>
