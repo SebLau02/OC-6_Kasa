@@ -10,6 +10,7 @@
     background-color: rgba(0, 0, 0, 0.6);
     overflow: hidden;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    padding: $padding_xs;
 
     h1 {
       font-size: 48px;
@@ -72,13 +73,12 @@
   }
 }
 
-@media screen and (max-width: 375px) {
+@include media-query(small) {
   #homepage {
     padding: 0 $padding_xs;
 
     .cover-container {
       border-radius: $radius_xs;
-      padding: $padding_xs;
 
       h1 {
         font-size: 24px;
