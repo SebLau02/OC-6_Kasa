@@ -9,13 +9,13 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Layout>
           <Routes>
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/housing/:id" element={<Housing />} />
             <Route path="*" element={<Error />} />
             <Route path="/about" element={<About />} />
           </Routes>
           <div>
-            <Link to="/home">Home</Link>
+            <Link to="/">Home</Link>
             <Link to="/housing/1">Housing</Link>
             <Link to="/about">About</Link>
             <Link to="/zsdfvgbn">Error</Link>
