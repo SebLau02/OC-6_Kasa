@@ -10,6 +10,30 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 36px;
+}
+
 #root {
-  font-family: "montserrat_regular";
+  @include montserrat-font;
+
+  & > * {
+    width: 85%;
+    max-width: 1240px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #root {
+    & > * {
+      width: 100%;
+    }
+  }
 }

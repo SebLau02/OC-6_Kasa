@@ -1,8 +1,16 @@
-@font-face {
-  font-family: "montserrat_regular";
-  src: url("../font/montserrat/montserrat-regular-webfont.woff2")
-      format("woff2"),
-    url("../font/montserrat/montserrat-regular-webfont.woff") format("woff");
-  font-weight: normal;
+// @font-face {
+//   font-family: "montserrat_regular";
+//   src: url("../font/montserrat/montserrat-regular-webfont.woff2")
+//       format("woff2"),
+//     url("../font/montserrat/montserrat-regular-webfont.woff") format("woff");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,500&display=swap");
+
+@mixin montserrat-font {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
   font-style: normal;
 }
