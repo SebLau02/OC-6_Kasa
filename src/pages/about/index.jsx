@@ -1,5 +1,12 @@
-const About = () => {
-  return <div>About</div>;
-};
+import { Dropdown } from "../../components"
+import AboutCover from "../../utils/images/home_cover.png"
 
-export default About;
+const About = () => {
+  return (
+    <div>
+      <img src={AboutCover} alt="vallée et chaine de montagne" />
+    </div>
+  )
+}
+
+export default About
