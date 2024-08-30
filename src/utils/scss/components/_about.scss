@@ -1,6 +1,17 @@
 #about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   .cover-container {
     @include cover-container;
     background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+  }
+
+  .about-list {
+    max-width: 1023px;
+    width: 100%;
   }
 }
