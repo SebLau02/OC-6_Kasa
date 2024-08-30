@@ -1,0 +1,42 @@
+@import "_variables";
+@import "_mixins";
+@import "_typo";
+@import "_home";
+@import "./components/_error";
+@import "./components/_about";
+@import "./components/_dropdown";
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+#root {
+  @include montserrat-font;
+
+  & > * {
+    width: 85%;
+    max-width: 1240px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #root {
+    & > * {
+      width: 100%;
+    }
+  }
+}
