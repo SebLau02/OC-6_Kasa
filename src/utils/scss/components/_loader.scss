@@ -1,0 +1,35 @@
+#loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100% !important;
+  max-width: none !important;
+  height: 100vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+  & > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 300px;
+    height: auto;
+  }
+
+  #home-svg-shadow {
+    opacity: 1;
+    filter: drop-shadow(0 0 20px #ff6060);
+    animation: loading 2s ease-in-out infinite;
+  }
+
+  @keyframes loading {
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

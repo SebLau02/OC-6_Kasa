@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
 import { Suspense, useState, useEffect } from "react"
 import { Home, Housing, Error, About } from "./pages"
-import { Layout } from "./components"
+import { Layout, Loader } from "./components"
 import { ProductContext } from "./contexts"
 
 function App() {
@@ -33,16 +33,17 @@ function App() {
       {error ? (
         <Error />
       ) : loading ? (
-        <p>Loading</p>
+        <Loader />
       ) : (
         <Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<Loader />}>
             <Layout>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/housing/:id" element={<Housing />} />
                 <Route path="*" element={<Error />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/loader" element={<Loader />} />
               </Routes>
               {/* <div>
             <Link to="/home">Home</Link>

@@ -1,10 +1,11 @@
 @import "_variables";
 @import "_mixins";
 @import "_typo";
-@import "_home";
+@import "./components/_home";
 @import "./components/_error";
 @import "./components/_about";
 @import "./components/_dropdown";
+@import "./components/_loader";
 
 *,
 ::before,
