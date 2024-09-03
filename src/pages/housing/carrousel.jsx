@@ -25,12 +25,16 @@ const Carrousel = ({ images }) => {
   }
   return (
     <div id="carrousel">
-      <button id="prev" aria-label="image précédente" onClick={handleSlide}>
-        <img src={Prev} alt="Précédent" />
-      </button>
-      <button id="next" aria-label="image suivante" onClick={handleSlide}>
-        <img src={Next} alt="Suivant" />
-      </button>
+      {images.length > 1 && (
+        <>
+          <button id="prev" aria-label="image précédente" onClick={handleSlide}>
+            <img src={Prev} alt="Précédent" />
+          </button>
+          <button id="next" aria-label="image suivante" onClick={handleSlide}>
+            <img src={Next} alt="Suivant" />
+          </button>
+        </>
+      )}
       <img src={images[activeImage]} alt={`images ${activeImage}`} />
       <span id="carrousel__total-image">{`${activeImage + 1}/${
         images.length
