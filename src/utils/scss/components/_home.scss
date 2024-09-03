@@ -30,7 +30,6 @@
     gap: 55px;
 
     a {
-      text-decoration: none;
       color: $font_color;
     }
 
@@ -102,14 +101,13 @@
 
     .cover-container {
       border-radius: $radius_xs;
-      padding: $padding_xs;
 
       h1 {
         font-size: 24px;
       }
     }
     main {
-      margin-top: $padding_xs;
+      margin: $padding_xs 0;
       gap: $padding_xs;
       padding: 0;
     }

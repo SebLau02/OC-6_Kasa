@@ -20,3 +20,12 @@
     object-fit: cover;
   }
 }
+
+// _media-queries.scss
+@mixin media-query($breakpoint) {
+  @if $breakpoint == small {
+    @media screen and (max-width: 375px) {
+      @content;
+    }
+  }
+}
