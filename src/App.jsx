@@ -1,32 +1,32 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Suspense, useState, useEffect } from "react";
-import { Home, Housing, Error, About } from "./pages";
-import { Layout } from "./components";
-import { ProductContext } from "./contexts";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+import { Suspense, useState, useEffect } from "react"
+import { Home, Housing, Error, About } from "./pages"
+import { Layout } from "./components"
+import { ProductContext } from "./contexts"
 
 function App() {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetch("data.json")
+    fetch("/data.json")
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("Network response was not ok")
         }
-        return response.json();
+        return response.json()
       })
       .then((data) => {
-        setData(data);
-        setLoading(false);
+        setData(data)
+        setLoading(false)
       })
       .catch((error) => {
-        console.log(error);
-        setError(error);
-        setLoading(false);
-      });
-  }, []);
+        console.log(error)
+        setError(error)
+        setLoading(false)
+      })
+  }, [])
 
   return (
     <ProductContext.Provider value={{ data, setData }}>
@@ -49,7 +49,7 @@ function App() {
         </Router>
       )}
     </ProductContext.Provider>
-  );
+  )
 }
 
-export default App;
+export default App
