@@ -5,13 +5,18 @@
   flex-direction: column;
 
   .cover-container {
-    @include cover-container;
-    background-color: rgba(0, 0, 0, 0.3);
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    @include cover-container;
   }
 
   .about-list {
     max-width: 1023px;
     width: 100%;
+
+    &:last-child {
+      margin-bottom: 50px;
+    }
   }
 }

@@ -26,11 +26,10 @@ const Dropdown = ({ title, text }) => {
 
   return (
     <div className={`dropdown ${open} ? "hidden" : "" `} ref={dropDownRef}>
-      <header ref={dropDownHeaderRef}>
+      <header ref={dropDownHeaderRef} onClick={handleOpen}>
         <span>{title}</span>
         <button
           className={!open ? "active" : ""}
-          onClick={handleOpen}
           aria-label={
             !open ? `ouvrir l'onglet ${title}` : `fermer l'onglet ${title}`
           }
@@ -39,7 +38,11 @@ const Dropdown = ({ title, text }) => {
         </button>
       </header>
       <main ref={dropDownMainRef} className={!open ? "active" : ""}>
-        {text}
+        <ul>
+          {text.map((text, i) => (
+            <li key={i}>{text}</li>
+          ))}
+        </ul>
       </main>
     </div>
   )

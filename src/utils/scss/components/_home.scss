@@ -6,9 +6,9 @@
   }
 
   .cover-container {
-    @include cover-container;
-
     background-color: rgba(0, 0, 0, 0.6);
+
+    @include cover-container;
 
     h1 {
       font-size: 48px;

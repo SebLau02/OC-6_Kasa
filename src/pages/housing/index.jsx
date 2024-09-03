@@ -10,6 +10,18 @@ const Housing = () => {
   const { data } = useContext(ProductContext)
   const propertyId = useParams().id
   const property = data.find((property) => property.id === propertyId)
+
+  const dropdownList = [
+    {
+      title: "Description",
+      text: [property.description],
+    },
+    {
+      title: "Equipements",
+      text: property.equipments,
+    },
+  ]
+
   return (
     <div id="housing">
       <Carrousel images={property.pictures} />
@@ -26,7 +38,7 @@ const Housing = () => {
       <div className="tags-rate">
         <div className="tags-rate__tags">
           {property.tags.map((tag, i) => (
-            <span tabIndex="0" key={i}>
+            <span tabIndex="0" key={tag + i}>
               {tag}
             </span>
           ))}
@@ -36,8 +48,11 @@ const Housing = () => {
         </div>
       </div>
       <div className="desc-fittings">
-        <Dropdown title="Description" text={[property.description]} />
-        <Dropdown title="Equipements" text={property.equipments} />
+        {dropdownList.map((dropdown, i) => (
+          <div key={dropdown.title + i}>
+            <Dropdown title={dropdown.title} text={dropdown.text} />
+          </div>
+        ))}
       </div>
     </div>
   )

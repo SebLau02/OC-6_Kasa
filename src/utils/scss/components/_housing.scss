@@ -70,4 +70,15 @@
       }
     }
   }
+  .desc-fittings {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 76px;
+    margin-bottom: 50px;
+
+    > div {
+      width: 50%;
+    }
+  }
 }

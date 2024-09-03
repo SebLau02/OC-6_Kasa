@@ -24,7 +24,6 @@ const Carrousel = ({ images }) => {
     }
   }
 
-  console.log(images)
   return (
     <div id="carrousel">
       {images.length > 1 && (
