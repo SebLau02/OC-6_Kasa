@@ -9,6 +9,12 @@
     background-color: rgba(0, 0, 0, 0.3);
 
     @include cover-container;
+
+    img {
+      @include media-query(small) {
+        scale: 1.2;
+      }
+    }
   }
 
   .about-list {
@@ -18,5 +24,9 @@
     &:last-child {
       margin-bottom: 50px;
     }
+  }
+
+  @include media-query(small) {
+    padding: 0 $padding_xs;
   }
 }

@@ -7,8 +7,15 @@
 
   .cover-container {
     background-color: rgba(0, 0, 0, 0.6);
+    padding: $padding_xs;
 
     @include cover-container;
+
+    img {
+      @include media-query(small) {
+        scale: 1.8;
+      }
+    }
 
     h1 {
       font-size: 48px;
@@ -100,8 +107,6 @@
     padding: 0 $padding_xs;
 
     .cover-container {
-      border-radius: $radius_xs;
-
       h1 {
         font-size: 24px;
       }
