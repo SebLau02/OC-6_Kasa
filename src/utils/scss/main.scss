@@ -1,41 +1,11 @@
-@import "_variables";
-@import "_mixins";
-@import "_typo";
-@import "./components/_home";
-@import "./components/_error";
-@import "./components/_about";
-@import "./components/_dropdown";
-@import "./components/_nav";
+@import "./utils/_variables";
+@import "./utils/_mixins";
+@import "./base/_typo";
+@import "./base/_reset";
+@import "./pages/_home";
+@import "./pages/_error";
+@import "./pages/_about";
+@import "./pages/_housing";
+@import "./layout/_nav";
 @import "./components/_carrousel";
-@import "./components/_housing";
-
-*,
-::before,
-::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-h1 {
-  font-size: 36px;
-}
-
-#root {
-  @include montserrat-font;
-
-  & > * {
-    width: 85%;
-    max-width: 1240px;
-    margin: auto;
-
-    @include media-query(small) {
-      width: 100%;
-    }
-  }
-}
+@import "./components/_dropdown";

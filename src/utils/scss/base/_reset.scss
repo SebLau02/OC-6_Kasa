@@ -1,0 +1,30 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+#root {
+  @include montserrat-font;
+
+  & > * {
+    width: 85%;
+    max-width: 1240px;
+    margin: auto;
+
+    @include media-query(small) {
+      width: 100%;
+    }
+  }
+}
