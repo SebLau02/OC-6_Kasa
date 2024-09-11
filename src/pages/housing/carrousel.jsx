@@ -25,7 +25,7 @@ const Carrousel = ({ images }) => {
   }
 
   return (
-    <div id="carrousel">
+    <div id="carrousel" role="region" aria-label="Carrousel d'images">
       {images.length > 1 && (
         <>
           <button id="prev" aria-label="image précédente" onClick={handleSlide}>
@@ -36,7 +36,11 @@ const Carrousel = ({ images }) => {
           </button>
         </>
       )}
-      <img src={images[activeImage]} alt={`images ${activeImage}`} />
+      <img
+        src={images[activeImage]}
+        alt={`Description de l'image, ${activeImage + 1} sur ${images.length}`}
+        aria-live="polite"
+      />
       <span id="carrousel__total-image">{`${activeImage + 1}/${
         images.length
       }`}</span>

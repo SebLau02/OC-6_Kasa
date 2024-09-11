@@ -37,4 +37,18 @@
     translate: -50% 0;
     color: $font_color;
   }
+
+  @include media-query(small) {
+    height: 255px;
+
+    button {
+      img {
+        height: 20px;
+      }
+    }
+
+    &__total-image {
+      display: none;
+    }
+  }
 }
