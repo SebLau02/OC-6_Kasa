@@ -1,10 +1,10 @@
 #housing {
-  .general-infos {
+  .generals-infos {
     display: flex;
     justify-content: space-between;
-    padding: $padding_xs 0;
+    padding-top: $padding_xs;
 
-    &__titles {
+    .property-infos {
       font-weight: 500;
 
       h1 {
@@ -18,67 +18,82 @@
         font-size: 18px;
         font-weight: 600;
       }
-    }
 
-    &__host {
+      &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+
+        span {
+          display: block;
+          width: 115px;
+          text-align: center;
+
+          padding: 4.5px 0;
+
+          border-radius: $radius_xs;
+          background-color: $primary__bg_color;
+          color: $font_color;
+        }
+      }
+    }
+    .host-rate {
       display: flex;
-      gap: 5px;
-      max-width: 167px;
+      flex-direction: column;
+      gap: 15px;
 
-      p {
-        color: $salmon_color;
-        text-align: right;
-        line-height: 25.67px;
+      &__host {
+        display: flex;
+        gap: 5px;
+        max-width: 167px;
+
+        p {
+          color: $salmon_color;
+          text-align: right;
+          line-height: 25.67px;
+        }
+        img {
+          width: 100%;
+          max-width: 64px;
+          height: 100%;
+          max-height: 64px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
       }
-      img {
-        width: 100%;
-        max-width: 64px;
-        height: 100%;
-        max-height: 64px;
-        border-radius: 50%;
-        object-fit: cover;
+
+      &__rate {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+
+        &__rate {
+          svg {
+            margin: 5px;
+          }
+        }
       }
     }
-  }
 
-  .tags-rate {
-    display: flex;
-    justify-content: space-between;
-
-    &__tags {
+    .desc-fittings {
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 10px;
-      max-width: 50%;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 76px;
+      margin-bottom: 50px;
 
-      span {
-        display: block;
-        width: 115px;
-        text-align: center;
-
-        padding: 4.5px 0;
-
-        border-radius: $radius_xs;
-        background-color: $primary__bg_color;
-        color: $font_color;
+      > div {
+        width: 50%;
       }
     }
-    &__rate {
-      svg {
-        margin: 5px;
-      }
-    }
-  }
-  .desc-fittings {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 76px;
-    margin-bottom: 50px;
 
-    > div {
-      width: 50%;
+    @include media-query(small) {
+      padding: 0 20px;
+
+      #carrousel {
+        height: 255px;
+      }
     }
   }
 }

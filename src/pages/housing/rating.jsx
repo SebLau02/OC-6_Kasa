@@ -1,4 +1,4 @@
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
 const Star = ({ color = "#E3E3E3" }) => (
   <svg
@@ -13,27 +13,27 @@ const Star = ({ color = "#E3E3E3" }) => (
       fill={color}
     />
   </svg>
-)
+);
 
 const Rating = ({ rate }) => {
   return (
-    <div>
+    <>
       {Array.from({ length: 5 }, (_, index) => (
         <Star
           color={index < parseInt(rate) ? "#ff6060" : "#E3E3E3"}
           key={index}
         />
       ))}
-    </div>
-  )
-}
+    </>
+  );
+};
 
 Rating.propTypes = {
   rate: PropTypes.string.isRequired,
-}
+};
 
 Star.propTypes = {
   color: PropTypes.string,
-}
+};
 
-export default Rating
+export default Rating;

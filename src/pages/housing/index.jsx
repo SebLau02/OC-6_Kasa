@@ -34,7 +34,7 @@ const Housing = () => {
       {property && (
         <div id="housing">
           <Carrousel images={property.pictures} />
-          <div className="general-infos">
+          {/* <div className="general-infos">
             <div className="general-infos__titles">
               <h1>{property.title}</h1>
               <p>{property.location}</p>
@@ -55,7 +55,30 @@ const Housing = () => {
             <div className="tags-rate__rate">
               <Rating rate={property.rating} />
             </div>
+          </div> */}
+          <div className="generals-infos">
+            <div className="property-infos">
+              <h1>{property.title}</h1>
+              <p>{property.location}</p>
+              <div className="property-infos__tags">
+                {property.tags.map((tag, i) => (
+                  <span tabIndex="0" key={tag + i}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="host-rate">
+              <div className="host-rate__host">
+                <p>{property.host.name}</p>
+                <img src={property.host.picture} alt={property.host.name} />
+              </div>
+              <div className="host-rate__rate">
+                <Rating rate={property.rating} />
+              </div>
+            </div>
           </div>
+
           <div className="desc-fittings">
             {dropdownList.map((dropdown, i) => (
               <div key={dropdown.title + i}>
