@@ -1,24 +1,24 @@
-import { Link, useLocation } from "react-router-dom"
-import { useEffect, useState } from "react"
+import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
 
-import Logo from "../logo"
+import Logo from "../logo";
 
 const Header = () => {
-  const [page, setPage] = useState("")
-  const location = useLocation()
+  const [page, setPage] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
     switch (location.pathname) {
-      case "/home":
-        setPage(0)
-        break
+      case "/":
+        setPage(0);
+        break;
       case "/about":
-        setPage(1)
-        break
+        setPage(1);
+        break;
       default:
-        setPage(0)
+        setPage(3);
     }
-  }, [location])
+  }, [location]);
 
   return (
     <header id="navbar">
@@ -39,7 +39,7 @@ const Header = () => {
         </Link>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
