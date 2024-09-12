@@ -7,7 +7,7 @@
 
   .cover-container {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: $padding_xs;
+    padding: $spacing_2;
 
     @include cover-container;
 
@@ -31,7 +31,7 @@
     align-items: stretch;
     flex-wrap: wrap;
     background-color: $grey_bg;
-    border-radius: $container_radius;
+    border-radius: $radius_2;
     margin-top: 50px;
     padding: 55px;
     gap: 55px;
@@ -52,8 +52,8 @@
       height: 82vw;
       max-height: 340px;
 
-      padding: $padding_xs;
-      border-radius: $radius_xs;
+      padding: $spacing_2;
+      border-radius: $radius_1;
       overflow: hidden;
 
       background-color: transparent;
@@ -104,7 +104,7 @@
 
 @media screen and (max-width: 375px) {
   #homepage {
-    padding: 0 $padding_xs;
+    padding: 0 $spacing_2;
 
     .cover-container {
       h1 {
@@ -112,8 +112,8 @@
       }
     }
     main {
-      margin: $padding_xs 0;
-      gap: $padding_xs;
+      margin: $spacing_2 0;
+      gap: $spacing_2;
       padding: 0;
     }
   }

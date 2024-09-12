@@ -27,6 +27,6 @@
   }
 
   @include media-query(small) {
-    padding: 0 $padding_xs;
+    padding: 0 $spacing_2;
   }
 }

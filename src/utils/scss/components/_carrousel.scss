@@ -1,7 +1,7 @@
 #carrousel {
   position: relative;
   height: 415px;
-  border-radius: $radius_l;
+  border-radius: $radius_2;
   overflow: hidden;
 
   > * {
@@ -40,6 +40,7 @@
 
   @include media-query(small) {
     height: 255px;
+    border-radius: $radius_1;
 
     button {
       img {

@@ -5,7 +5,7 @@
   align-items: center;
   height: 40vw;
   max-height: 223px;
-  border-radius: $container_radius;
+  border-radius: $radius_2;
   overflow: hidden;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 
@@ -21,7 +21,7 @@
 
   @include media-query(small) {
     height: 111px;
-    border-radius: $radius_xs;
+    border-radius: $radius_1;
   }
 }
 
