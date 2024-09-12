@@ -20,10 +20,6 @@
   .about-list {
     max-width: 1023px;
     width: 100%;
-
-    &:last-child {
-      margin-bottom: $spacing_5;
-    }
   }
 
   @include media-query(small) {

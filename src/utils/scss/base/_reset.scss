@@ -22,6 +22,7 @@ h1 {
     width: 85%;
     max-width: 1240px;
     margin: auto;
+    padding: $spacing_5 0;
 
     @include media-query(small) {
       width: 100%;
