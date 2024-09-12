@@ -3,6 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 139px;
+  padding: 139px 0;
 
   span {
     font-size: 288px;
@@ -11,9 +13,22 @@
   }
   h1 {
     color: $salmon_color;
-    margin: 100px 0 130px 0;
+    width: fit-content;
   }
   a {
     text-decoration: underline;
+  }
+  @include media-query(small) {
+    gap: 113px;
+    padding: 113px 0;
+
+    span {
+      font-size: 96px;
+    }
+    h1 {
+      text-align: center;
+      width: 80%;
+      margin: auto;
+    }
   }
 }

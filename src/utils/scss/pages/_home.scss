@@ -32,9 +32,9 @@
     flex-wrap: wrap;
     background-color: $grey_bg;
     border-radius: $radius_2;
-    margin-top: 50px;
-    padding: 55px;
-    gap: 55px;
+    margin-top: $spacing_5;
+    padding: $spacing_55;
+    gap: $spacing_55;
 
     a {
       color: $font_color;

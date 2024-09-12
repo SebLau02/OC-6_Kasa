@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 0;
+  padding-top: 45px;
 
   nav {
     a {
@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 50px;
+  gap: $spacing_5;
 
   width: 100% !important;
   max-width: none !important;
@@ -36,7 +36,7 @@
 
 @include media-query(small) {
   #navbar {
-    padding: 45px 20px;
+    padding: $spacing_2 $spacing_2 0 $spacing_2;
 
     svg {
       width: 145px;

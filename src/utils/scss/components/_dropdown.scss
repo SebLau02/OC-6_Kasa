@@ -39,7 +39,7 @@
     z-index: -1;
     background-color: rgba(246, 246, 246, 0.45);
     width: 100%;
-    padding: 20px;
+    padding: $spacing_2;
     border-radius: 0px 0px 5px 5px;
     translate: 0 -4%;
     transition: translate 0.2s ease-out;
@@ -59,7 +59,7 @@
   }
 
   @include media-query(small) {
-    margin-top: 20px;
+    margin-top: $spacing_2;
     font-size: 13px;
 
     header {
