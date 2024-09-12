@@ -25,12 +25,12 @@
         margin-top: 20px;
 
         span {
-          display: block;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           width: 115px;
           text-align: center;
-
           padding: 4.5px 0;
-
           border-radius: $radius_1;
           background-color: $primary__bg_color;
           color: $font_color;
