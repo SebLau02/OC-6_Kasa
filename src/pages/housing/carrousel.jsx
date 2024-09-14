@@ -41,9 +41,11 @@ const Carrousel = ({ images }) => {
         alt={`Description de l'image, ${activeImage + 1} sur ${images.length}`}
         aria-live="polite"
       />
-      <span id="carrousel__total-image">{`${activeImage + 1}/${
-        images.length
-      }`}</span>
+      {images.length > 1 && (
+        <span id="carrousel__total-image">{`${activeImage + 1}/${
+          images.length
+        }`}</span>
+      )}
     </div>
   )
 }
