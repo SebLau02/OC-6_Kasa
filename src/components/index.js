@@ -1,4 +1,5 @@
-import Dropdown from "./dropdown";
-import Layout from "./layout";
+import Dropdown from "./dropdown"
+import Layout from "./layout"
+import Carrousel from "./carrousel"
 
-export { Dropdown, Layout };
+export { Dropdown, Layout, Carrousel }

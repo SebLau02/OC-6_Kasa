@@ -3,8 +3,7 @@ import { ProductContext } from "../../contexts"
 import { useParams, useNavigate } from "react-router-dom"
 
 import Rating from "./rating"
-import Carrousel from "./carrousel"
-import { Dropdown } from "../../components"
+import { Dropdown, Carrousel } from "../../components"
 
 const Housing = () => {
   const { data } = useContext(ProductContext)
